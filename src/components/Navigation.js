@@ -13,10 +13,16 @@ const Navigation = () => {
     //e.preventDefault()
     setEvent(e.target.value)
     
-    if(e.key =="Enter"){
-        navigate(`/movies?q=${e.target.value}`)
-    }
+    
 }
+
+// const searchkey = (e) =>{
+//   e.preventDefault()
+//   setEvent(e.target.value)
+//   if(e.key =="Enter"){
+//     navigate(`/movies?q=${event}`)
+// }
+// }
 
   const spaceSearch =()=>{
     navigate(`/movies?q=${event}`)
@@ -43,9 +49,11 @@ const Navigation = () => {
               placeholder="Search"
               className="me-2"
               aria-label="Search"
+              
               onChange={(e)=>search(e)}
             />
-             {/* <input type="text" style={{border:"none", marginLeft:"5px", fontSize:"16px"}} placeholder='제품검색' onChange={(e)=>search(e)}></input> */}
+
+             {/* <input type="text" style={{border:"none", marginLeft:"5px", fontSize:"16px"}} placeholder='제품검색' onKeyPress={(e)=>searchkey(e)}></input> */}
             <Button variant="outline-danger" onClick={spaceSearch}><FaSearch/></Button>
           </Form>
         </Navbar.Collapse>

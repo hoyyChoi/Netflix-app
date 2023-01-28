@@ -19,7 +19,7 @@ const MoviePopularCard = ({item}) => {
 
   return (
     <div className='popular-card'
-        style={{backgroundImage:"url("+`https://image.tmdb.org/t/p/original/${item.backdrop_path}`+')',backgroundSize:"cover",opacity:'0.7'}} 
+        style={{backgroundImage:"url("+`https://image.tmdb.org/t/p/original/${item.backdrop_path}`+')',backgroundSize:"cover",opacity:'0.7',cursor:"pointer"}} 
         onClick={spaceMovieDetail}>
         <div className='overla'>
             <div style={{display:"flex",alignItems:"center"}}>

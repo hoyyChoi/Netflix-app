@@ -10,7 +10,7 @@ function getSearch(searchquery){
             console.log('dsfasasdasdadwasd')
             console.log('zzzzz',Searchapi)
 
-            dispatch({type:"GET_SEARCH",payload:{search:Searchapi.data}})
+            dispatch({type:"GET_SEARCH",payload:{search:Searchapi.data.results}})
         }catch(error){
             dispatch({type:"GET_SEARCH_ERROR"})
         }

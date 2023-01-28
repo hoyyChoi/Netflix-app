@@ -22,7 +22,7 @@ const Movies = () => {
     const [activePage,setActivePage] = useState(1)
     const [genre,setGenre] = useState('')
 
-    const {search}= useSelector(state=>state.search)
+    const search= useSelector(state=>state.search.search)
     console.log('qqqq',popular)
 
    

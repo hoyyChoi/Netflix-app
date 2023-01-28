@@ -1,5 +1,5 @@
 let initialState={
-    search:{}
+    search:[]
 }
 
 function getmoviesReducer(state=initialState,action){
