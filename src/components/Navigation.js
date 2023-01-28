@@ -9,20 +9,20 @@ const Navigation = () => {
   const navigate = useNavigate()
   const [event,setEvent] = useState('')
 
-  const search = (e) =>{
-    //e.preventDefault()
-    setEvent(e.target.value)
+//   const search = (e) =>{
+//     //e.preventDefault()
+//     setEvent(e.target.value)
     
     
-}
+// }
 
-// const searchkey = (e) =>{
-//   e.preventDefault()
-//   setEvent(e.target.value)
-//   if(e.key =="Enter"){
-//     navigate(`/movies?q=${event}`)
-// }
-// }
+const searchkey = (e) =>{
+  //e.preventDefault()
+  setEvent(e.target.value)
+  if(e.key =="Enter"){
+    navigate(`/movies?q=${e.target.value}`)
+}
+}
 
   const spaceSearch =()=>{
     navigate(`/movies?q=${event}`)
@@ -43,7 +43,7 @@ const Navigation = () => {
             <Link to="/" className='nav-item'>Home</Link>
             <Link to="/movies" className='nav-item'>Movies</Link>
           </Nav>
-          <Form className="d-flex">
+          {/* <Form className="d-flex">
             <Form.Control
               type="text"
               placeholder="Search"
@@ -53,9 +53,11 @@ const Navigation = () => {
               onChange={(e)=>search(e)}
             />
 
-             {/* <input type="text" style={{border:"none", marginLeft:"5px", fontSize:"16px"}} placeholder='제품검색' onKeyPress={(e)=>searchkey(e)}></input> */}
+             {/* <input type="text" style={{border:"none", marginLeft:"5px", fontSize:"16px"}} placeholder='제품검색' onKeyPress={(e)=>searchkey(e)}></input>
             <Button variant="outline-danger" onClick={spaceSearch}><FaSearch/></Button>
-          </Form>
+          </Form> */}
+          <input type="text" style={{borderRadius:"5px", border:"none", marginRight:"15px", fontSize:"18px"}} placeholder='search' onKeyPress={(e)=>searchkey(e)}></input>
+          <Button variant="outline-danger" onClick={spaceSearch}><FaSearch/></Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>

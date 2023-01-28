@@ -220,3 +220,7 @@ body{
   margin-top: 10px;
   
 }
+
+input:focus {
+  outline: none;
+}
